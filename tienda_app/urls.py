@@ -22,4 +22,9 @@ urlpatterns = [
         CompraAPIView.as_view(),
         name="api_comprar"
     ),
+    path(
+        "api/v1/productos/",
+        CompraAPIView.as_view(),
+        name="api_productos"
+    ), 
 ]
