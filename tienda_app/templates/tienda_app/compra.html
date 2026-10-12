@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tienda Grado Empresarial</title>
+</head>
+<body>
+    <h1>Procesar Compra</h1>
+
+    {% if mensaje_exito %}
+        <div style="color: green; font-weight: bold;">{{ mensaje_exito }}</div>
+        <p><strong>Stock restante después de la compra:</strong> {{ stock }} unidades</p>
+        <a href="/">Volver a la tienda y verificar inventario</a>
+    {% else %}
+        {% if error %}
+            <div style="color: red; border: 1px solid red; padding: 10px;">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        <h2>{{ libro.titulo }}</h2>
+        <p>Precio con IVA: <strong>${{ total }}</strong></p>
+        <p><strong>Stock disponible antes de comprar:</strong> {{ stock }} unidades</p>
+        {% if stock == 0 %}<p style="color: red;">No hay unidades disponibles.</p>{% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" style="padding: 10px 20px; background: #28a745; color: white; border: none; cursor: pointer;">
+                Confirmar Pago con Banco Nacional
+            </button>
+        </form>
+    {% endif %}
+</body>
+</html>

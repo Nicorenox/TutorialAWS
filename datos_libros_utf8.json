@@ -1,0 +1,50 @@
+[
+{
+  "model": "tienda_app.libro",
+  "pk": 1,
+  "fields": {
+    "titulo": "Clean Code",
+    "precio": "85000.00"
+  }
+},
+{
+  "model": "tienda_app.libro",
+  "pk": 2,
+  "fields": {
+    "titulo": "Patrones de diseño",
+    "precio": "72000.00"
+  }
+},
+{
+  "model": "tienda_app.libro",
+  "pk": 3,
+  "fields": {
+    "titulo": "Python para todos",
+    "precio": "60000.00"
+  }
+},
+{
+  "model": "tienda_app.inventario",
+  "pk": 1,
+  "fields": {
+    "libro": 1,
+    "cantidad": 9
+  }
+},
+{
+  "model": "tienda_app.inventario",
+  "pk": 2,
+  "fields": {
+    "libro": 2,
+    "cantidad": 8
+  }
+},
+{
+  "model": "tienda_app.inventario",
+  "pk": 3,
+  "fields": {
+    "libro": 3,
+    "cantidad": 12
+  }
+}
+]

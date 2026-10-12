@@ -1,0 +1,10 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.git/
+.gitignore
+.env
+*.log
+*.sqlite3
+TUTORIAL_TALLER*.md

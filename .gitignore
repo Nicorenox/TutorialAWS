@@ -1,0 +1,9 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+*.log
+db.sqlite3
+db.sqlite3.respaldo
+datos_libros.json

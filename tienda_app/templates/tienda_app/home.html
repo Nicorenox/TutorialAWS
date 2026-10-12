@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tienda de libros</title>
+</head>
+<body>
+    <h1>Tienda de libros</h1>
+
+    {% if libros %}
+        {% for libro in libros %}
+            <section>
+                <h2>{{ libro.titulo }}</h2>
+                <p>Precio base: ${{ libro.precio }}</p>
+                <p><strong>Stock disponible:</strong> <span>{{ libro.stock_actual }}</span> unidades</p>
+                {% if libro.stock_actual == 0 %}<p style="color: #b00020;">Agotado</p>{% endif %}
+
+                <a href="{% url 'finalizar_compra' libro.id %}">
+                    Comprar (CBV)
+                </a>
+
+                |
+
+                <a href="{% url 'compra_rapida_fbv' libro.id %}">
+                    Comprar (FBV)
+                </a>
+            </section>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>No hay libros registrados.</p>
+    {% endif %}
+
+    <p><a href="/admin/">Administración</a></p>
+</body>
+</html>

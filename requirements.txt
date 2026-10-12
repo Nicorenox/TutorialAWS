@@ -1,0 +1,5 @@
+Django>=5.2,<5.3
+djangorestframework>=3.16,<3.17
+markdown>=3.7,<4
+django-filter>=25.1,<26
+psycopg2-binary>=2.9,<3
